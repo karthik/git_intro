@@ -49,6 +49,7 @@
 <section id="Transparency" data-markdown data-state="bluesky">
     <script type="text/template">
         ## Uses of version control
+          * An amazing backup
           * promotes transparency
           * facilitates reproducibility
           * faster recovery from errors
@@ -104,6 +105,14 @@
     <li>A tree talking about how those checksums correspond to versions, branches, etc.</li>
   </ul>
   </aside>
+  </section>
+
+  <section id="a_tree" data-markdown>
+      <script type="text/template">
+      ## How Git internally tracks changes
+      <br><br>
+          ![](img/acommit_tree.png)
+      </script>
   </section>
 
 <section id="a_commit" data-markdown>
@@ -264,91 +273,20 @@
 </section>
 
 <!-- ~~~~~~~~~~~~~ End Chacon  ~~~~~~~~~~~~~~~~~~ -->
-
-
-
-
-
-
-<section id="aliases" data-markdown>
-    <script type="text/template">
-    ### Git Aliases
-
-```
-git config --global alias.br branch
-git config --global alias.co checkout
-git config --global alias.ci commit
-git config --global alias.df diff
-git config --global alias.lg log -p
-git config --global alias.st status
-```
-    </script>
-</section>
-
-
-
-
-
-  <section>
-  <h2>A git repository is two things</h2>
-  <ul>
-    <li>A key value store mapping checksum &rarr; file</li>
-    <li>A tree talking about how those checksums correspond to versions, branches, etc.</li>
-  </ul>
-  </aside>
-  </section>
-
-   <section>
-  <h2>To the User..</h2>
-  <p class="large">A magic directory with lots of filesystem features.</p>
-  </section>
-
-<section>
-  <h2>git init</h2>
-  <p>Creates a new git repository</p>
-  <pre><code>
-  - project/
-      + .git/
-      - README
-  </code></pre>
-  <p>The git repository lives in <code>.git</code></p>
-  </section>
-
-
-  <section>
-  <h2>Interact with the repository with a staging process</h2>
-  </section>
-
-  <section>
-  <img src="img/lifecycle1.png" />
-  </section>
-
-  <section>
-  <img src="img/lifecycle2.png" />
-  </section>
-
-  <section>
-  <h3>Demo</h3>
-  <ul>
-    <li>git init</li>
-    <li>git status</li>
-    <li>git add</li>
-    <li>git commit</li>
-  </ul>
-  </section>
-
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section data-markdown>
-    <script type="text/template">
-        ## Git plumbing
-        ![](http://git-scm.com/images/logo@2x.png)
-    </script>
-</section>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section id="lets_start" data-markdown>
+<section id="lets_start" data-markdown data-state="bluesky">
     <script type="text/template">
         ## Lets start using Git!
+    </script>
+</section>
+
+<section id="shell_git" data-markdown>
+    <script type="text/template">
+        ## Type in git from the terminal
+<br>
+```
+git
+```
+
     </script>
 </section>
 
@@ -369,66 +307,69 @@ git config username
     </script>
 </section>
 
-<section id="seeking_help" data-markdown>
+
+
+<section id="How_it_works" data-markdown>
     <script type="text/template">
-        ```
-$ git help <verb>
-$ git <verb> --help
-$ man git-<verb>
-```
+      ## There are 4 main steps to a basic Git workflow
+      <br><br>
+
+      1. Edit files (grab a tub of ice cream off the shelf)
+      2. Stage the changes (put it in your cart)
+      3. Review these changes (Do you really want ice cream?)
+      4. Commit these changes (pay for it)
     </script>
 </section>
 
-<section data-markdown>
+<section id="lifecycle">
+<img src="img/lifecycle1.png" />
+</section>
+
+<section id="How_it_works2" data-markdown>
     <script type="text/template">
-        ## Configuration
-        <br><br>
-        ```
-        $ git
-usage: git [--version] [--help] [-c name=value]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           <command> [<args>]
+      ## There are 4 main steps to a basic Git workflow
+      <br><br>
 
-The most commonly used git commands are:
-   add        Add file contents to the index
-   bisect     Find by binary search the change that introduced a bug
-   branch     List, create, or delete branches
-   checkout   Checkout a branch or paths to the working tree
-   clone      Clone a repository into a new directory
-   commit     Record changes to the repository
-   diff       Show changes between commits, commit and working tree, etc
-   fetch      Download objects and refs from another repository
-   grep       Print lines matching a pattern
-   init       Create an empty Git repository or reinitialize an existing one
-   log        Show commit logs
-   merge      Join two or more development histories together
-   mv         Move or rename a file, a directory, or a symlink
-   pull       Fetch from and merge with another repository or a local branch
-   push       Update remote refs along with associated objects
-   rebase     Forward-port local commits to the updated upstream head
-   reset      Reset current HEAD to the specified state
-   rm         Remove files from the working tree and from the index
-   show       Show various types of objects
-   status     Show the working tree status
-   tag        Create, list, delete or verify a tag object signed with GPG
-
-See 'git help <command>' for more information on a specific command.
-        ```
+      1. Edit files (create a file)
+      2. Stage the changes (<code>git add</code>)
+      3. Review these changes (<code>git diff</code>)
+      4. Commit these changes (<code>git commit</code>)
     </script>
 </section>
+
+<section id="lifecycle2">
+<img src="img/lifecycle2.png" />
+</section>
+
+
+<section id="How_it_works3">
+     <h2>An even simpler workflow</h2>
+<ol>
+ <li class="fragment"> edit files (Grab tub of ice cream)</li>
+ <li class="fragment"> Stage the changes and commit  (run to cashier and pay for it)</li>
+</ol>
+</section>
+
+<section id="How_it_works4" data-markdown>
+    <script type="text/template">
+      ## An even simpler workflow
+      1. edit files (Use your favorite editor)
+      2. Stage the changes and commit  (`git commit -am`)
+    </script>
+</section>
+
+
 
 <section id="create_new_folder" data-markdown>
     <script type="text/template">
     ## Create a folder and initialize a git repository
     <br><br>
-        ```
+```
 mkdir temp
 cd temp
 git init
 Initialized empty Git repository in /private/tmp/temp/.git/
-        ```
+```
     </script>
 </section>
 
@@ -449,6 +390,7 @@ drwxr-xr-x  10 karthik  wheel   340 Apr 12 16:05 .git
 ```
 ```
 ls -l .git
+
 total 40
 -rw-r--r--   1 karthik  wheel   16 Apr 12 16:06 COMMIT_EDITMSG
 -rw-r--r--   1 karthik  wheel   23 Apr 12 16:05 HEAD
@@ -591,10 +533,10 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 ## Exercise 1
 <hr>
 1. Please create a new folder
-2. Initialise a git repository
-3. Add a file
+2. Initialise a git repository (<code>use git init</code>)
+3. Create a file and add it
 4. Commit the file.
-5. View the logs.
+5. View the logs (<code>git log</code>)
 6. Modify and commit the file again
 7. Now view the logs to see your commit history
     </script>
@@ -603,59 +545,145 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 <section data-markdown>
     <script type="text/template">
         # Git Branching
-        ![](http://git-scm.com/images/logo@2x.png)
     </script>
 </section>
 
-<section>
+<!-- <section>
 <img src="http://git-scm.com/figures/18333fig0318-tn.png" />
-</section>
+</section> -->
 
-<section>
-<img src="http://git-scm.com/figures/18333fig0319-tn.png" />
-</section>
 
-<section>
-<h2>Suggestions for best practices</h2>
-<br><br><br>
-<ul>
-  <li class="fragment">New feature &rarr; new branch</li>
-  <li class="fragment">Always use <i>Descriptive</i> branch names</li>
-  <li class="fragment">Always use <i>Descriptive</i> commit messages!</li>
-</ul>
-</section>
 
-<section>
-<img src="http://git-scm.com/figures/18333fig0327-tn.png" />
-</section>
 
-<section>
-<h3>Fixing with a merge...</h3>
-<img src="http://git-scm.com/figures/18333fig0328-tn.png" />
-</section>
 
-<section>
+<section id="masters">
 <h3>Master branch</h3>
 <img src="img/threecommits.png" />
 <hr>
 <img src="img/masterbranch.png" />
 </section>
 
-<section>
+<section id="curr_br">
 <h3>Current branch</h3>
 <img src="img/head.png" />
 </section>
 
-<section>
+<section id="new_br">
 <h3>New branch</h3>
 <img src="img/newbranch.png" />
 </section>
 
-<section>
+<section id="new_branch">
 <h3>New branch</h3>
 <img src="img/HEAD_testing.png" />
 </section>
 
+<section id="create_a_branch" data-markdown>
+    <script type="text/template">
+    ## Lets branch out!
+    <br><br>
+
+```
+ # What branches do I have?
+git branch
+ # create a new branch
+git branch new_idea
+git branch
+git checkout new_idea
+git branch
+```
+    </script>
+</section>
+
+
+<section id="branches">
+  <h3>Compare the two branches</h3>
+<table  width=80%>
+<tr>
+<td>
+<pre>
+<code>git branch
+* master
+  new_idea
+
+cat file1.txt
+
+cat file1.txt
+My first file
+Another exciting data point to my file
+</code>
+</pre>
+</td>
+
+<td>
+<pre>
+<code>git branch
+git checkout new_idea
+  master
+* new_idea
+
+
+cat file1.txt
+
+My first file
+Another exciting data point to my file
+Another new line
+Added a sentence in my new branch
+</code>
+</pre>
+</td>
+
+
+</tr></table>
+</section>
+
+
+
+<section id="merge" data-markdown>
+    <script type="text/template">
+## Merging two branches
+
+```
+git checkout master
+git merge new_idea
+git status
+cat file1.txt
+```
+    </script>
+</section>
+
+
+<section id="what_merge_looks" data-markdown>
+    <script type="text/template">
+    ## What a merge looks like
+<br>
+        ![](img/after_merge.png)
+    </script>
+</section>
+
+<section title="after_merge">
+<h3>Fixing with a merge...</h3>
+<img src="http://git-scm.com/figures/18333fig0328-tn.png" />
+</section>
+
+<!-- <section>
+<img src="http://git-scm.com/figures/18333fig0327-tn.png" />
+</section>
+ -->
+<section id="Add_remotes" data-markdown>
+    <script type="text/template">
+        # Add a remote to mirror your repository
+    </script>
+</section>
+
+
+<section id="adding_a_remote" data-markdown>
+    <script type="text/template">
+       ```
+       git remote -v
+       ```
+    </script>
+</section>
 
 <section id="remotes" data-markdown  data-state="bluesky">
     <script type="text/template">
@@ -667,6 +695,19 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
     <script type="text/template">
     ## GitHub.com
         ![](img/github_com.png)
+    </script>
+</section>
+
+<section id="push_and_pull" data-markdown>
+    <script type="text/template">
+        # Syncing with a remote repository
+```
+git push
+```
+
+```
+git pull
+```
     </script>
 </section>
 
@@ -692,156 +733,6 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 3. progit.com
     </script>
 </section>
-
-
-
-
-<!-- ~~~~~~~~~~~~~ Start Chacon  ~~~~~~~~~~~~~~~~~~ -->
-<section id="how_git_works" data-markdown data-state="bluesky">
-    <script type="text/template">
-        # What's happening underneath the hood
-    </script>
-</section>
-
-<section id="chacon51" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0051.png)
-    </script>
-</section>
-
-<section id="chacon52" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0052.png)
-    </script>
-</section>
-
-<section id="chacon53" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0053.png)
-    </script>
-</section>
-
-<section id="chacon54" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0054.png)
-    </script>
-</section>
-
-<section id="chacon55" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0055.png)
-    </script>
-</section>
-
-<section id="chacon56" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0056.png)
-    </script>
-</section>
-
-<section id="chacon57" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0057.png)
-    </script>
-</section>
-
-<section id="chacon58" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0058.png)
-    </script>
-</section>
-
-<section id="chacon59" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0059.png)
-    </script>
-</section>
-
-<section id="chacon60" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0060.png)
-    </script>
-</section>
-
-<section id="chacon61" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0061.png)
-    </script>
-</section>
-
-<section id="chacon62" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0062.png)
-    </script>
-</section>
-
-<section id="chacon63" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0063.png)
-    </script>
-</section>
-
-<section id="chacon64" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0064.png)
-    </script>
-</section>
-
-<section id="chacon65" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0065.png)
-    </script>
-</section>
-
-<section id="chacon66" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0066.png)
-    </script>
-</section>
-
-<section id="chacon67" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0067.png)
-    </script>
-</section>
-
-<section id="chacon68" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0068.png)
-    </script>
-</section>
-
-<section id="chacon69" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0069.png)
-    </script>
-</section>
-
-<section id="chacon70" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0070.png)
-    </script>
-</section>
-
-<section id="chacon71" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0071.png)
-    </script>
-</section>
-
-<section id="chacon72" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0072.png)
-    </script>
-</section>
-
-<section id="chacon73" data-markdown>
-    <script type="text/template">
-        ![](Chacon/foo-0073.png)
-    </script>
-</section>
-
-<!-- ~~~~~~~~~~~~~ End Chacon  ~~~~~~~~~~~~~~~~~~ -->
 
 
 <!-- ~~~~~~~~~~~~~ end divs  ~~~~~~~~~~~~~~~~~~ -->
