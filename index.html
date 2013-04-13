@@ -31,21 +31,24 @@
 </section>
 
 
+<!-- .......................................... -->
 <section id="howmany" data-markdown>
     <script type="text/template">
         ## Have you heard of a Version Control System?
     </script>
 </section>
 
+<!-- ......Let's jump into git, hooray! .......... -->
 
 
-<section id="plan2" data-markdown>
+<!-- .......................................... -->
+<section id="plan" data-markdown>
     <script type="text/template">
         ![](img/vcs_for_science.png)
     </script>
 </section>
 
-
+<!-- .......................................... -->
 <section id="Transparency" data-markdown data-state="bluesky">
     <script type="text/template">
         ## Uses of version control
@@ -58,6 +61,7 @@
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="benefits_for_you" data-markdown data-state="bluesky">
     <script type="text/template">
         ## Uses of version control
@@ -68,6 +72,7 @@
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="not_dropobox" data-markdown data-state="bluesky">
     <script type="text/template">
         This is much more robust than a system like Dropbox <br>
@@ -75,8 +80,8 @@
     </script>
 </section>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section id="title" data-markdown>
+<!-- .......................................... -->
+<section id="snapshots" data-markdown>
 
     <script type="text/template">
     ### Version control captures snapshots of your work through time
@@ -85,7 +90,7 @@
 </section>
 
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- .......................................... -->
 <section id="how_it_works" data-markdown data-state="bluesky">
     <script type="text/template">
          ## What is Git?
@@ -93,13 +98,15 @@
 </section>
 
 
-<section id="dist" data-markdown>
+<!-- .......................................... -->
+<section id="distributed" data-markdown>
     <script type="text/template">
         ##  Git is an open source, distributed, version control system.
     </script>
 </section>
 
-<section>
+<!-- .......................................... -->
+<section id="whatgoesintoagitrepo">
   <h2>A git repository is two things</h2>
   <ul>
     <li>A <b>key value store</b> maps checksum &rarr; file</li>
@@ -108,7 +115,8 @@
   </aside>
   </section>
 
-  <section id="a_tree" data-markdown>
+  <!-- .......................................... -->
+<section id="a_tree" data-markdown>
       <script type="text/template">
       ## How Git internally tracks changes
       <br><br>
@@ -116,14 +124,16 @@
       </script>
   </section>
 
+<!-- .......................................... -->
 <section id="a_commit" data-markdown>
     <script type="text/template">
-    ## Let's examine a commit (snapshot)
+    ##  Examine a commit (snapshot)
         ![](img/commit_anatomy.png)
     </script>
 </section>
 
-<section id="a_commits" data-markdown>
+<!-- .......................................... -->
+<section id="three_commits" data-markdown>
     <script type="text/template">
         ![](img/threecommits.png)
     </script>
@@ -273,13 +283,16 @@
     </script>
 </section>
 
-<!-- ~~~~~~~~~~~~~ End Chacon  ~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~ End Chacon, damn that was long  ~~~~~~~~~~~~~~~~~~ -->
+
+<!-- .......................................... -->
 <section id="lets_start" data-markdown data-state="bluesky">
     <script type="text/template">
         ## Lets start using Git!
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="shell_git" data-markdown>
     <script type="text/template">
         ## Type in git from the terminal
@@ -287,11 +300,11 @@
 ```
 git
 ```
-
-    </script>
+</script>
 </section>
 
-<section data-markdown>
+<!-- .......................................... -->
+<section id="configuration" data-markdown>
     <script type="text/template">
         ## Configuration
         <br><br>
@@ -310,7 +323,8 @@ git config username
 
 
 
-<section id="How_it_works" data-markdown>
+<!-- .......................................... -->
+<section id="basic_workflow" data-markdown>
     <script type="text/template">
       ## There are 4 main steps to a basic Git workflow
 <br><br>
@@ -322,11 +336,13 @@ git config username
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="lifecycle">
 <img src="img/lifecycle1.png" />
 </section>
 
-<section id="How_it_works2" data-markdown>
+<!-- .......................................... -->
+<section id="workflow_fleshed_out" data-markdown>
 <script type="text/template">
   ## There are 4 main steps to a basic Git workflow
 
@@ -342,7 +358,8 @@ git config username
 </section>
 
 
-<section id="How_it_works3">
+<!-- .......................................... -->
+<section id="even-simpler-workflow-ice-cream">
      <h2>An even simpler workflow</h2>
 <ol>
  <li class="fragment"> edit files (Grab tub of ice cream)</li>
@@ -350,7 +367,8 @@ git config username
 </ol>
 </section>
 
-<section id="How_it_works4" data-markdown>
+<!-- .......................................... -->
+<section id="even-simpler-workflow" data-markdown>
     <script type="text/template">
       ## An even simpler workflow
       1. edit files (Use your favorite editor)
@@ -360,6 +378,7 @@ git config username
 
 
 
+<!-- .......................................... -->
 <section id="create_new_folder" data-markdown>
     <script type="text/template">
     ## Create a folder and initialize a git repository
@@ -374,7 +393,8 @@ Initialized empty Git repository in /private/tmp/temp/.git/
 </section>
 
 
-<section id="Examine_the_directory" data-markdown>
+<!-- .......................................... -->
+<section id="examine_the_directory" data-markdown>
     <script type="text/template">
 ## Now examine the folder
 
@@ -407,7 +427,8 @@ drwxr-xr-x   4 karthik  wheel  136 Apr 12 16:05 refs
     </script>
 </section>
 
-<section id="Create a file" data-markdown>
+<!-- .......................................... -->
+<section id="Create-a-file" data-markdown>
     <script type="text/template">
   ## Create a file
 
@@ -418,6 +439,7 @@ drwxr-xr-x   4 karthik  wheel  136 Apr 12 16:05 refs
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="git_status" data-markdown>
     <script type="text/template">
     ## The git status
@@ -437,6 +459,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 </section>
 
 
+<!-- .......................................... -->
 <section id="add_a_file" data-markdown>
     <script type="text/template">
 ```
@@ -456,6 +479,7 @@ nothing added to commit but untracked files present (use "git add" to track)
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="your_first_commit" data-markdown>
     <script type="text/template">
 ```
@@ -481,6 +505,7 @@ nothing to commit, working directory clean
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="make_changes" data-markdown>
     <script type="text/template">
       ## Make some changes
@@ -504,6 +529,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="log" data-markdown>
     <script type="text/template">
 ## View the logs
@@ -528,9 +554,10 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 </section>
 
 
+<!-- .......................................... -->
 <section id="exercise_1" data-markdown>
     <script type="text/template">
-## Exercise 1
+## Exercise
 <hr>
 1. Please create a new folder
 2. Initialise a git repository (<code>use git init</code>)
@@ -539,9 +566,11 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 5. View the logs (<code>git log</code>)
 6. Modify and commit the file again
 7. Now view the logs to see your commit history
+8. Take a break!
     </script>
 </section>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- .......................................... -->
 <section id="create_aliases" data-markdown>
     <script type="text/template">
         # Create some shortcuts (aliases)
@@ -563,20 +592,15 @@ git config ls.log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="branch_title" data-markdown>
     <script type="text/template">
         # Git Branching
     </script>
 </section>
 
-<!-- <section>
-<img src="http://git-scm.com/figures/18333fig0318-tn.png" />
-</section> -->
 
-
-
-
-
+<!-- .......................................... -->
 <section id="masters">
 <h3>Master branch</h3>
 <img src="img/threecommits.png" />
@@ -584,21 +608,25 @@ git config ls.log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]
 <img src="img/masterbranch.png" />
 </section>
 
+<!-- .......................................... -->
 <section id="curr_br">
 <h3>Current branch</h3>
 <img src="img/HEAD.png" />
 </section>
 
+<!-- .......................................... -->
 <section id="new_br">
 <h3>New branch</h3>
 <img src="img/newbranch.png" />
 </section>
 
+<!-- .......................................... -->
 <section id="new_branch">
 <h3>New branch</h3>
 <img src="img/HEAD_testing.png" />
 </section>
 
+<!-- .......................................... -->
 <section id="create_a_branch" data-markdown>
     <script type="text/template">
     ## Lets branch out!
@@ -617,7 +645,8 @@ git branch
 </section>
 
 
-<section id="branchess">
+<!-- .......................................... -->
+<section id="comparing-two-branches">
   <h3>Compare the two branches</h3>
 <table  width=80%>
 <tr>
@@ -660,7 +689,8 @@ Added a sentence in my new branch
 
 
 
-<section id="merge" data-markdown>
+<!-- .......................................... -->
+<section id="merging" data-markdown>
     <script type="text/template">
 ## Merging two branches
 
@@ -674,6 +704,7 @@ cat file1.txt
 </section>
 
 
+<!-- .......................................... -->
 <section id="what_merge_looks" data-markdown>
     <script type="text/template">
     ## What a merge looks like
@@ -682,22 +713,22 @@ cat file1.txt
     </script>
 </section>
 
+<!-- .......................................... -->
 <section title="after_merge">
 <h3>Fixing with a merge...</h3>
 <img src="http://git-scm.com/figures/18333fig0328-tn.png" />
 </section>
 
-<!-- <section>
-<img src="http://git-scm.com/figures/18333fig0327-tn.png" />
-</section>
- -->
-<section id="Add_remotes" data-markdown>
+
+<!-- .......................................... -->
+<section id="adding-a-remotes" data-markdown>
     <script type="text/template">
         # Add a remote to mirror your repository
     </script>
 </section>
 
 
+<!-- .......................................... -->
 <section id="adding_a_remote" data-markdown>
     <script type="text/template">
 ### What remotes do you have?
@@ -714,12 +745,14 @@ git remote add ...
     </script>
 </section>
 
-<section id="remotes" data-markdown  data-state="bluesky">
+<!-- .......................................... -->
+<section id="remote-hosts" data-markdown  data-state="bluesky">
     <script type="text/template">
         # Using a Git hosting service
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="hosting_options" data-markdown>
 <script type="text/template">
 ### Where to host your code
@@ -730,6 +763,7 @@ git remote add ...
 </script>
 </section>
 
+<!-- .......................................... -->
 <section id="clone_this_repo" data-markdown>
     <script type="text/template">
     ### Clone the repo you are currently viewing!
@@ -739,6 +773,7 @@ git clone git@github.com:karthikram/git_intro.git
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="5_min_break" data-markdown data-state="skyblue">
     <script type="text/template">
 ## Take 15 minutes to poke around my repo. See my logs, branches (or just take a break)
@@ -746,7 +781,7 @@ git clone git@github.com:karthikram/git_intro.git
 </section>
 
 <!-- 10 minute break -->
-
+<!-- .......................................... -->
 <section id="github" data-markdown>
   # Using a Git hosting service like GitHub
     <script type="text/template">
@@ -755,6 +790,7 @@ git clone git@github.com:karthikram/git_intro.git
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="push_and_pull" data-markdown>
     <script type="text/template">
         # Syncing with a remote repository
@@ -768,7 +804,7 @@ git pull
     </script>
 </section>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- .......................................... -->
 <section id="review" data-markdown>
     <script type="text/template">
         ## Git command review
@@ -782,6 +818,7 @@ git pull
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="resources" data-markdown>
     <script type="text/template">
         ## Additional resources
@@ -791,12 +828,14 @@ git pull
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="shuttle" data-markdown  data-state="bluesky">
     <script type="text/template">
         ![](img/endavour.jpg)
     </script>
 </section>
 
+<!-- .......................................... -->
 <section id="prius" data-markdown  data-state="bluesky">
     <script type="text/template">
         ![](img/prius.jpg)
@@ -812,6 +851,7 @@ git pull
 
 <script src="js/slides/head.min.js"></script>
 <script src="js/slides/reveal.min.js"></script>
+
 <!-- Load JS here for greater good =============================-->
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
