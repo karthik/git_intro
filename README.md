@@ -1,5 +1,5 @@
 
-# My Git intro to the Berkeley Software Carpentry group
+# My Git into to the Berkeley Software Carpentry group
 
 Question, comments, pull requests welcome.
 
