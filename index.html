@@ -557,6 +557,7 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 git config alias.ci commit
 git config alias.co checkout
 git config alias.br branch
+git config ls.log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 ```
 
     </script>
@@ -721,13 +722,30 @@ git remote add ...
 
 <section id="hosting_options" data-markdown>
 <script type="text/template">
-## Where to host your code
+### Where to host your code
 
 * **Bitbucket.com**: unlimited free private hosting for students
 * **GitHub.com**: offers 5 free private repositories for students
 * Both offer unlimited public repositories
 </script>
 </section>
+
+<section id="clone_this_repo" data-markdown>
+    <script type="text/template">
+    ### Clone the repo you are currently viewing!
+```
+git clone git@github.com:karthikram/git_intro.git
+```
+    </script>
+</section>
+
+<section id="5_min_break" data-markdown data-state="skyblue">
+    <script type="text/template">
+## Take 15 minutes to poke around my repo. See my logs, branches (or just take a break)
+    </script>
+</section>
+
+<!-- 10 minute break -->
 
 <section id="github" data-markdown>
   # Using a Git hosting service like GitHub
