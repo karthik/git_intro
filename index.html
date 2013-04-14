@@ -141,7 +141,7 @@
 <!-- ~~~~~~~~~~~~~ Start Chacon  ~~~~~~~~~~~~~~~~~~ -->
 <section id="how_git_works" data-markdown data-state="bluesky">
     <script type="text/template">
-        # What's happening underneath the hood
+        # What happens underneath the hood
     </script>
 </section>
 
@@ -385,6 +385,9 @@ git config user.name
 mkdir temp
 cd temp
 git init
+```
+
+```
 Initialized empty Git repository in /private/tmp/temp/.git/
 ```
     </script>
@@ -394,7 +397,7 @@ Initialized empty Git repository in /private/tmp/temp/.git/
 <!-- .......................................... -->
 <section id="examine_the_directory" data-markdown>
     <script type="text/template">
-## Now examine the folder
+### Now examine the folder
 
 ```
 ls -la
@@ -441,6 +444,9 @@ drwxr-xr-x   4 karthik  wheel  136 Apr 12 16:05 refs
 <section id="git_status" data-markdown>
     <script type="text/template">
     ## git status
+```
+git status
+```
 
 ```
   # On branch master
@@ -465,7 +471,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
   git add file1.txt
   git status
+```
 
+```
   # On branch master
   #
   # Initial commit
@@ -512,12 +520,10 @@ nothing to commit, working directory clean
     <script type="text/template">
       ## Make some changes
 
-<pre><code lang="bash">
-echo "Another exciting data point to my file" >> file1.txt
+<pre><code>echo "Another exciting data point to my file" >> file1.txt
 </code></pre>
 
-<pre><code class="bash">
-git status
+<pre><code>git status
 
 # On branch master
 # Changes not staged for commit:
@@ -538,7 +544,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ```
 git log
+```
 
+```
 commit ee10d636d5859340a37e2a9b5e1d2f1138858b20
 Author: Karthik Ram <karthik.ram@gmail.com>
 Date:   Fri Apr 12 17:33:52 2013 -0700
@@ -562,7 +570,7 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 ## Exercise
 <hr>
 1. Create a new folder
-2. Initialise a git repository (<code>use git init</code>)
+2. Initialize a git repository (<code>use git init</code>)
 3. Create a file and add it
 4. Commit the file.
 5. View the logs (<code>git log</code>)
@@ -641,7 +649,7 @@ Do a <code>git diff</code>
 ```
 git diff
 ```
-Then commit your changes
+Then commit your changes (Capitalized, short summary (less than 50 chars))
 
 ```
 git commit
@@ -664,7 +672,7 @@ git branch
 cat file1.txt
 
 My first file
-Another exciting data point to my file
+Another exciting data point
 </code>
 </pre>
 </td>
@@ -676,11 +684,10 @@ git checkout new_idea
   master
 * new_idea
 
-
 cat file1.txt
 
 My first file
-Another exciting data point to my file
+Another exciting data point
 Another new line
 Added a sentence in my new branch
 </code>
@@ -692,6 +699,19 @@ Added a sentence in my new branch
 </section>
 
 
+<section id="new_files" data-markdown>
+    <script type="text/template">
+### Also create a couple of new files in this branch
+
+```
+touch a.txt
+touch b.txt
+git add .
+git commit -m "Add new files"
+git status
+```
+    </script>
+</section>
 
 <!-- .......................................... -->
 <section id="merging" data-markdown>
