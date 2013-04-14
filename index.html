@@ -2,20 +2,21 @@
 <html lang="en">
   <head>
     <title>Git for Science</title>
-    <meta name="description" content="">
-		<meta name="author" content="Karthik Ram">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="A short introduction to git">
+        <meta name="author" content="Karthik Ram">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="stylesheet" href="css/slides/reveal.min.css" />
     <link rel="stylesheet" href="css/slides/oscar.css" id="theme" />
     <link rel="stylesheet" href="css/slides/ted.css" />
     <link rel="stylesheet" href="css/slides/github.css">
 
+<!-- Licensed as CC-BY, please edit and use as you see fit. -->
 
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
   </head>
   <body>
     <div class="reveal">
@@ -141,7 +142,7 @@
 <!-- ~~~~~~~~~~~~~ Start Chacon  ~~~~~~~~~~~~~~~~~~ -->
 <section id="how_git_works" data-markdown data-state="bluesky">
     <script type="text/template">
-        # What's happening underneath the hood?
+        # What happens underneath the hood
     </script>
 </section>
 
@@ -316,7 +317,7 @@ git
 <p class="small" align="left">See your current setings</p>
 ```
 git config --list
-git config username
+git config user.name
 ```
     </script>
 </section>
@@ -353,6 +354,9 @@ git config username
     </script>
 </section>
 
+
+
+
 <!-- .......................................... -->
 <section id="even-simpler-workflow-ice-cream">
      <h2>An even simpler workflow</h2>
@@ -382,6 +386,9 @@ git config username
 mkdir temp
 cd temp
 git init
+```
+
+```
 Initialized empty Git repository in /private/tmp/temp/.git/
 ```
     </script>
@@ -391,7 +398,7 @@ Initialized empty Git repository in /private/tmp/temp/.git/
 <!-- .......................................... -->
 <section id="examine_the_directory" data-markdown>
     <script type="text/template">
-## Now examine the folder
+### Now examine the folder
 
 ```
 ls -la
@@ -438,6 +445,9 @@ drwxr-xr-x   4 karthik  wheel  136 Apr 12 16:05 refs
 <section id="git_status" data-markdown>
     <script type="text/template">
     ## git status
+```
+git status
+```
 
 ```
   # On branch master
@@ -462,7 +472,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
   git add file1.txt
   git status
+```
 
+```
   # On branch master
   #
   # Initial commit
@@ -509,12 +521,10 @@ nothing to commit, working directory clean
     <script type="text/template">
       ## Make some changes
 
-<pre><code lang="bash">
-echo "Another exciting data point to my file" >> file1.txt
+<pre><code>echo "Another exciting data point to my file" >> file1.txt
 </code></pre>
 
-<pre><code class="bash">
-git status
+<pre><code>git status
 
 # On branch master
 # Changes not staged for commit:
@@ -535,7 +545,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ```
 git log
+```
 
+```
 commit ee10d636d5859340a37e2a9b5e1d2f1138858b20
 Author: Karthik Ram <karthik.ram@gmail.com>
 Date:   Fri Apr 12 17:33:52 2013 -0700
@@ -559,7 +571,7 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
 ## Exercise
 <hr>
 1. Create a new folder
-2. Initialise a git repository (<code>use git init</code>)
+2. Initialize a git repository (<code>use git init</code>)
 3. Create a file and add it
 4. Commit the file.
 5. View the logs (<code>git log</code>)
@@ -569,27 +581,7 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
     </script>
 </section>
 
-<!-- .......................................... -->
-<section id="create_aliases" data-markdown>
-    <script type="text/template">
-        # Create some shortcuts (aliases)
-    </script>
-</section>
 
-
-<section id="aliases" data-markdown>
-    <script type="text/template">
-## Create some Git aliases
-
-```
-git config alias.ci commit
-git config alias.co checkout
-git config alias.br branch
-git config ls.log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-```
-
-    </script>
-</section>
 
 <!-- .......................................... -->
 <section id="branch_title" data-markdown>
@@ -639,10 +631,32 @@ git branch new_idea
 git branch
 git checkout new_idea
 git branch
+echo "Another new line" >> file1.txt
+echo "Added a sentence in my new branch" >> file1.txt
 ```
     </script>
 </section>
 
+<section id="commit_to_new_branch" data-markdown>
+    <script type="text/template">
+Make some changes to this <code>new_idea</code> branch
+
+```
+echo "Another new line" >> file1.txt
+echo "Added a sentence in my new branch" >> file1.txt
+```
+Do a <code>git diff</code>
+
+```
+git diff
+```
+Then commit your changes (Capitalized, short summary (less than 50 chars))
+
+```
+git commit
+```
+    </script>
+</section>
 
 <!-- .......................................... -->
 <section id="comparing-two-branches">
@@ -651,15 +665,15 @@ git branch
 <tr>
 <td>
 <pre>
-<code>git branch
+<code>git checkout master
+git branch
 * master
   new_idea
 
 cat file1.txt
 
-cat file1.txt
 My first file
-Another exciting data point to my file
+Another exciting data point
 </code>
 </pre>
 </td>
@@ -671,11 +685,10 @@ git checkout new_idea
   master
 * new_idea
 
-
 cat file1.txt
 
 My first file
-Another exciting data point to my file
+Another exciting data point
 Another new line
 Added a sentence in my new branch
 </code>
@@ -687,6 +700,19 @@ Added a sentence in my new branch
 </section>
 
 
+<section id="new_files" data-markdown>
+    <script type="text/template">
+### Also create a couple of new files in this branch
+
+```
+touch a.txt
+touch b.txt
+git add .
+git commit -m "Add new files"
+git status
+```
+    </script>
+</section>
 
 <!-- .......................................... -->
 <section id="merging" data-markdown>
@@ -830,6 +856,8 @@ git pull
 </section>
 
 <!-- .......................................... -->
+<!-- Prius Dashboard image source: http://www.flickr.com/photos/shinerclay/5020338937/ -->
+<!-- This is how you are using Git now, which is fine. -->
 <section id="prius" data-markdown  data-state="bluesky">
     <script type="text/template">
         ![](img/prius.jpg)
@@ -837,6 +865,8 @@ git pull
 </section>
 
 <!-- .......................................... -->
+<!-- Endeavor image source: http://www.flickr.com/photos/jurvetson/6912974136/ -->
+<!-- But really, this is the true power of Git. You can expose every wire and button under the hood if you wanted to. -->
 <section id="shuttle" data-markdown  data-state="bluesky">
     <script type="text/template">
         ![](img/endavour.jpg)
@@ -880,16 +910,16 @@ git pull
     // <script src="http://vjs.zencdn.net/c/video.js"></script>
     <script src="js/application.js"></script>
 <script>
-			Reveal.initialize({
-				controls: false,
-				progress: false,
-				history: true,
-				center: true,
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+            Reveal.initialize({
+                controls: false,
+                progress: false,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
         { src: 'js/slides/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -897,22 +927,9 @@ git pull
           { src: 'js/slides/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: 'js/slides/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 
-				]
-			});
+                ]
+            });
 </script>
 
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '5169e47f108d7b18ef000053');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
   </body>
 </html>
