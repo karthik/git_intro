@@ -628,6 +628,26 @@ echo "Added a sentence in my new branch" >> file1.txt
     </script>
 </section>
 
+<section id="commit_to_new_branch" data-markdown>
+    <script type="text/template">
+Make some changes to this <code>new_idea</code> branch
+
+```
+echo "Another new line" >> file1.txt
+echo "Added a sentence in my new branch" >> file1.txt
+```
+Do a <code>git diff</code>
+
+```
+git diff
+```
+Then commit your changes
+
+```
+git commit
+```
+    </script>
+</section>
 
 <!-- .......................................... -->
 <section id="comparing-two-branches">
@@ -636,13 +656,13 @@ echo "Added a sentence in my new branch" >> file1.txt
 <tr>
 <td>
 <pre>
-<code>git branch
+<code>git checkout master
+git branch
 * master
   new_idea
 
 cat file1.txt
 
-cat file1.txt
 My first file
 Another exciting data point to my file
 </code>
