@@ -1,8 +1,9 @@
 
 # My Git into to the Berkeley Software Carpentry group
 
-Question, comments, pull requests welcome.
+[View this presentation online](http://karthikram.github.io/git_intro)
 
+Question, comments, pull requests welcome.
 
 ## Image sources
 
