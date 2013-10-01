@@ -449,8 +449,7 @@ git config user.name
     ## Create a folder and initialize a git repository
     <br><br>
 ```
-mkdir temp
-cd temp
+cd day1
 git init
 ```
 
@@ -501,8 +500,10 @@ drwxr-xr-x   4 karthik  wheel  136 Apr 12 16:05 refs
   ## Create a file
 
   ```
-  echo "My first file" > file1.txt
-  git status
+git add .
+git commit
+# or
+git commit -m "A useful commit message"
   ```
     </script>
 </section>
@@ -636,14 +637,13 @@ Date:   Fri Apr 12 16:06:25 2013 -0700
     <script type="text/template">
 ## Exercise
 <hr>
-1. Create a new folder
+1. cd into your day1 folder.
 2. Initialize a git repository (<code>use git init</code>)
-3. Create a file and add it
-4. Commit the file.
+3. Add all the file you've created since yesterday
+4. Commit the files
 5. View the logs (<code>git log</code>)
-6. Modify and commit the file again
+6. Modify and commit any file again
 7. Now view the logs to see your commit history
-8. Take a break!
     </script>
 </section>
 
