@@ -344,46 +344,6 @@ git
 </script>
 </section>
 
-<!-- .......................................... -->
-<section id="configuration" data-markdown>
-    <script type="text/template">
-        ## Configuration
-        <br><br>
-        ```
-        git config --global user.name "Karthik Ram"
-        git config --global user.email "kram@berkeley.edu"
-        git config --global color.ui "auto"
-        git config --global core.editor "gedit -w -s" 
-        ```
-<p class="small" align="left">See your current setings</p>
-```
-git config --list
-git config user.name
-```
-    </script>
-</section>
-
-
-<!-- .......................................... -->
-<section id="aliases" data-markdown>
-    <script type="text/template">
-        ## Aliases
-        <br><br>
-        ```
-        git config --global alias.st status 
-        git config --global alias.ci commit 
-        git config --global alias.co checkout 
-        git config --global alias.ls 'log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit'
-        git config --global alias.ll 'log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate --numstat'
-        ```
-<p class="small" align="left">See your current setings</p>
-```
-git config --list
-git config user.name
-```
-    </script>
-</section>
-
 
 
 <!-- .......................................... -->
