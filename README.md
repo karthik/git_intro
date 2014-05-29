@@ -1,5 +1,5 @@
 
-# My Git into to the Berkeley Software Carpentry group
+# My Git intro to the Berkeley Software Carpentry group
 
 [![](slide_thumbnail.png)](http://karthik.github.io/git_intro)
 
